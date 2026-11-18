@@ -493,7 +493,15 @@ body.P .logochip.big{width:520px}
 #navbtns button{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(100,25,70,.3);background:rgba(255,255,255,.85);color:var(--plum);font-size:18px;font-weight:900;cursor:pointer;font-family:var(--sans)}
 #navbtns button:focus-visible{outline:2px solid var(--plum);outline-offset:2px}
 body.P #navbtns{display:none}
-body.P #s-raise .rcta .pill:first-child{display:none}body.P #s-raise .rc p{margin-bottom:4px}
+.goalbar{background:#641946;color:#fff;border-radius:20px;padding:20px 32px;margin-bottom:26px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:28px;align-items:center}
+.goalbar .g1{font-family:'EB Garamond',Georgia,serif;font-size:38px;font-weight:600;line-height:1.1}
+.goalbar .g2{grid-row:1/3;grid-column:2;justify-self:end;font-family:'EB Garamond',Georgia,serif;font-size:76px;font-weight:700;color:#F2C46B;line-height:1}
+.goalbar .g3{font-size:22px;opacity:.9;margin-top:6px}
+body.P .goalbar{display:block;padding:30px 36px;margin-bottom:24px}
+body.P .goalbar .g1{font-size:44px} body.P .goalbar .g2{font-size:120px;margin:8px 0 6px} body.P .goalbar .g3{font-size:30px}
+body.P #s-raise .rc{padding:26px 34px} body.P #s-raise .rc p:not(:last-child){display:none}
+body.P #s-raise .rc .v{font-size:76px;margin-top:14px} body.P #s-raise .rc h3{font-size:36px}
+body.P #s-raise .raise{gap:18px} body.P #s-raise .rcta{display:none}
 </style>
 
 <div id="vp"><div id="stage">
@@ -813,12 +821,12 @@ body.P #s-raise .rcta .pill:first-child{display:none}body.P #s-raise .rc p{margi
   <div class="eb" data-in>What we are raising for</div>
   <h2 class="tt" data-in style="--d:120ms">Help us take the Begur model <em>further</em></h2>
   <div class="bd">
+    <div class="goalbar" data-in style="--d:200ms"><div class="g1">Overall fundraise goal for Project Impact</div><div class="g2">₹1 crore</div><div class="g3">₹60 lakh sterilisations + ₹30 lakh Whitefield centre + ₹10 lakh vehicle</div></div>
     <div class="raise">
       <div class="rc feat" data-in="scale" style="--d:300ms"><span class="chip">Project Impact</span><div class="v num"><span data-count="1500" data-indian="1">0</span></div><h3>sterilisations</h3><p>At <b>₹4,000 per sterilisation</b>, fully loaded: catching, blood screening, surgery, recovery and return to the same street.</p><h3 style="margin-top:16px">1,500 × ₹4,000 = ₹60 lakh</h3></div>
       <div class="rc" data-in="scale" style="--d:450ms"><span class="chip">New centre</span><div class="v">Whitefield</div><h3>ABC centre setup</h3><p>Our second centre, built on the Begur playbook, for the zone of Bengaluru with the most street dogs and the lowest sterilisation coverage.</p><h3 style="margin-top:16px">₹30 lakh</h3></div>
       <div class="rc" data-in="scale" style="--d:600ms"><span class="chip">Field capacity</span><div class="v">Vehicle</div><h3>Ambulance / field vehicle</h3><p>Fitted for animal transport, so catch teams can work in parallel and keep both centres' theatres full.</p><h3 style="margin-top:16px">₹10 lakh</h3></div>
     </div>
-    <div data-in style="--d:800ms;margin-top:26px;background:#641946;color:#fff;border-radius:18px;padding:22px 32px;display:flex;align-items:center;justify-content:space-between;gap:12px 28px;flex-wrap:wrap"><div style="font-family:'EB Garamond',Georgia,serif;font-size:40px;font-weight:600;line-height:1.1">Overall fundraise goal for Project Impact: <b style="font-size:54px;color:#F2C46B">₹1 crore</b></div><div style="font-size:22px;opacity:.9">₹60 lakh sterilisations + ₹30 lakh Whitefield + ₹10 lakh vehicle</div></div>
     <div class="rcta" data-in style="--d:900ms"><span class="pill">Every rupee reported case by case, and at close against bills</span><span class="pill">12A · 80G · CSR-1</span></div>
   </div>
   <div class="ft"><span>Mylos Foundation · Mylos Rescue</span><span class="pg"></span></div>

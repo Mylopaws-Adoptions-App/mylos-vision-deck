@@ -942,6 +942,27 @@ function fit(){
   stage.style.transform = `translate(${(w - W*scale)/2}px,${(h - H*scale)/2}px) scale(${scale})`;
 }
 addEventListener('resize', fit); fit();
+function fitP(){
+  const P = document.body.classList.contains('P');
+  document.querySelectorAll('.slide').forEach(s => {
+    const bd = s.querySelector('.bd'), ft = s.querySelector('.ft');
+    if(!bd) return;
+    bd.style.transform = ''; bd.style.width = ''; bd.style.transformOrigin = '';
+    if(!P) return;
+    let avail = bd.clientHeight;
+    if(ft) avail = Math.min(avail, ft.offsetTop - bd.offsetTop - 24);
+    const need = bd.scrollHeight;
+    if(avail > 0 && need > avail + 2){
+      const k = Math.max(0.55, avail / need);
+      bd.style.transformOrigin = 'top left';
+      bd.style.transform = 'scale(' + k + ')';
+      bd.style.width = (100 / k) + '%';
+    }
+  });
+}
+addEventListener('resize', () => setTimeout(fitP, 60));
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitP);
+setTimeout(fitP, 300); fitP();
 
 /* ── Word-by-word lines ─────────────────────────────────────────── */
 document.querySelectorAll('[data-words]').forEach(q => {
